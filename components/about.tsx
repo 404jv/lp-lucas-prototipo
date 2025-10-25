@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Award, Target, Users } from "lucide-react";
-import styles from "./about.module.css";
+import styles from "./About.module.css";
 
 const About: FC = () => {
   return (
