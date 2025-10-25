@@ -1,6 +1,4 @@
-import About from "@/components/about";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import About from "@/components/About";
 import Image from "next/image";
 
 
