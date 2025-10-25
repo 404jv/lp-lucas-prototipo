@@ -45,6 +45,20 @@ const About: FC = () => {
                                 <div className={styles.cardSubtitle}>Alunos ativos</div>
                             </div>
                         </div>
+                        <div className={styles.buttonArea} >
+                            <button
+                                className={styles.buttonGroup}
+                                onClick={() =>
+                                    window.open(
+                                        "https://wa.me/554499999999?text=Oi, vim pelo site!",
+                                        "_blank"
+                                    )
+                                }
+                            >
+                                Comece agora
+                            </button>
+                        </div>
+
                     </div>
 
                     {/* Imagem */}
