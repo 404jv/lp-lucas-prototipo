@@ -1,9 +1,7 @@
-"use client";
-import About from "@/components/About";
+import About from "@/components/about";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
-
 import Image from "next/image";
 
 
