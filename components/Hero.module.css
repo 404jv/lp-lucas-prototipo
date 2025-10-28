@@ -36,7 +36,6 @@
   font-weight: bold;
   font-size: 2.5rem;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
 }
 
 .highlight {
@@ -61,18 +60,20 @@
   cursor: pointer;
   font-weight: 600;
   font-size: 1.125rem;
+  height:  40px;
   padding: 1.5rem 2rem;
   border-radius: 9999px;
   transition: all 0.3s ease-in-out;
-  border: none;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 /* Botões */
 .primaryButton {
-  background-color: #f5e0c3; /* brand-beige */
-  color: #064e3b; /* brand-green-dark */
+  background-color: #f5e0c3;
+  color: #064e3b; 
+  border: none;
 }
 
 .primaryButton:hover {
@@ -81,7 +82,7 @@
 
 .outlineButton {
   background: transparent;
-  border: 2px solid white;
+  border: 2px solid white; /* sempre visível */
   color: white;
 }
 
@@ -142,6 +143,8 @@
 }
 
 .scrollIndicatorOuter {
+  position: relative;
+  top: 15px;
   width: 1.5rem;
   height: 2.5rem;
   border: 2px solid rgba(255, 255, 255, 0.5);

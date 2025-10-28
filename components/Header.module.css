@@ -7,34 +7,34 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 48px; /* mais afastado das laterais */
-  background-color: rgba(11, 31, 19, 0.6); /* transparente inicialmente */
+  padding: 0 32px;
+  background-color: #0b1f13; /* fundo verde escuro */
   color: #f1f5f9;
   z-index: 100;
   transition: all 0.3s ease;
 }
 
 .scrolled {
-  background-color: rgba(11, 31, 19, 0.95); /* mais escura ao rolar */
+  background-color: rgba(11, 31, 19, 0.95);
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 .logo {
-  font-weight: 600; /* diminui o peso */
+  font-weight: bold;
   font-size: 1.5rem;
-  color: rgba(163, 191, 168, 0.9); /* leve verde transparente */
+  color: #ffffff; 
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: 32px; /* mais espaçamento entre botões */
+  gap: 24px;
 }
 
 .navButton {
   background: none;
   border: none;
-  color: #a3bfa8; /* cor dos links */
+  color: #ffffff; 
   font-weight: 500;
   cursor: pointer;
   transition: color 0.2s ease;
@@ -45,8 +45,8 @@
 }
 
 .startButton {
-  background-color: #a3bfa8;
-  color: #0b1f13;
+  background-color: #63836c;
+  color: rgb(225, 216, 216);
   padding: 8px 16px;
   border-radius: 8px;
   font-weight: bold;
@@ -56,8 +56,7 @@
 }
 
 .startButton:hover {
-  background-color: #8ab28c;
-  color: #0b1f13;
+  background-color: #5a7662;
 }
 
 /* Mobile */
@@ -92,7 +91,6 @@
 .showMobileNav {
   display: flex;
 }
-
 
 @media (max-width: 768px) {
   .nav {
