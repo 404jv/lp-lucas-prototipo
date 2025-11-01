@@ -1,3 +1,4 @@
+"use client";
 import { ClipboardCheck, Dumbbell, LineChart, Trophy } from "lucide-react";
 import styles from "./HowItWorks.module.css";
 

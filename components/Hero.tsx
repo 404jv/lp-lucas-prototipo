@@ -43,8 +43,10 @@ const Hero: React.FC = () => {
             alcance o físico que você sempre quis
           </h1>
           <p className={styles.subtitle}>
-            Acompanhamento personalizado, resultados reais e uma metodologia comprovada para você
-            conquistar seus objetivos.
+            Acompanhamento personalizado, resultados reais e uma<br></br>
+            metodologia comprovada para você
+            conquistar seus <br />
+            objetivos.
           </p>
           <div className={styles.buttonGroup}>
             <Button variant="primary" arrow onClick={scrollToPlans}>
