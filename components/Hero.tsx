@@ -3,14 +3,21 @@
 import React from "react";
 import styles from "./Hero.module.css";
 
-// Botão simples com variantes
+// Botão simples com variante
 const Button: React.FC<
-  React.ButtonHTMLAttributes<HTMLButtonElement> & { variant?: "primary" | "outline" }
-> = ({ children, variant = "primary", className = "", ...props }) => {
-  const btnClass = variant === "primary" ? styles.primaryButton : styles.outlineButton;
+  React.ButtonHTMLAttributes<HTMLButtonElement> & { variant?: "primary" | "outline"; arrow?: boolean }
+> = ({ children, variant = "primary", arrow = false, className = "", ...props }) => {
+  const btnClass =
+    variant === "primary"
+      ? arrow
+        ? `${styles.primaryButton} ${styles.primaryButtonWithArrow}`
+        : styles.primaryButton
+      : styles.outlineButton;
+
   return (
     <button className={`${btnClass} ${className}`} {...props}>
       {children}
+      {arrow && <span className={styles.buttonArrow}>→</span>}
     </button>
   );
 };
@@ -29,25 +36,24 @@ const Hero: React.FC = () => {
   return (
     <section className={styles.section}>
       <div className={styles.backgroundPattern}></div>
-
       <div className={styles.container}>
         <div className={styles.heroContent}>
           <h1 className={styles.title}>
-            Transforme sua rotina, <span className={styles.highlight}>supere seus limites</span> e alcance o físico que você sempre quis
+            Transforme sua rotina, <span className={styles.highlight}>supere seus limites</span> e
+            alcance o físico que você sempre quis
           </h1>
           <p className={styles.subtitle}>
-            Acompanhamento personalizado, resultados reais e uma metodologia comprovada para você conquistar seus objetivos.
+            Acompanhamento personalizado, resultados reais e uma metodologia comprovada para você
+            conquistar seus objetivos.
           </p>
-
           <div className={styles.buttonGroup}>
-            <Button variant="primary" onClick={scrollToPlans}>
+            <Button variant="primary" arrow onClick={scrollToPlans}>
               Comece agora
             </Button>
             <Button variant="outline" onClick={scrollToSobre}>
               Conheça meu trabalho
             </Button>
           </div>
-
           <div className={styles.stats}>
             <div>
               <div className={styles.statNumber}>6+</div>

@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #064e3b; /* brand-green-dark */
+  background-color: rgb(17 39 32);
   color: white;
   overflow: hidden;
   text-align: center;
@@ -36,7 +36,6 @@
   font-weight: bold;
   font-size: 2.5rem;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
 }
 
 .highlight {
@@ -61,15 +60,20 @@
   cursor: pointer;
   font-weight: 600;
   font-size: 1.125rem;
+  height:  40px;
   padding: 1.5rem 2rem;
   border-radius: 9999px;
-  transition: all 0.2s ease-in-out;
-  border: none;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Botões */
 .primaryButton {
-  background-color: #f5e0c3; /* brand-beige */
-  color: #064e3b; /* brand-green-dark */
+  background-color: #f5e0c3;
+  color: #064e3b; 
+  border: none;
 }
 
 .primaryButton:hover {
@@ -78,13 +82,30 @@
 
 .outlineButton {
   background: transparent;
-  border: 2px solid white;
+  border: 2px solid white; /* sempre visível */
   color: white;
 }
 
 .outlineButton:hover {
   background: white;
   color: #064e3b;
+}
+
+/* Botão Comece agora com setinha */
+.primaryButtonWithArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.buttonArrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.primaryButtonWithArrow:hover .buttonArrow {
+  transform: translateX(5px);
 }
 
 /* Stats */
@@ -122,6 +143,8 @@
 }
 
 .scrollIndicatorOuter {
+  position: relative;
+  top: 15px;
   width: 1.5rem;
   height: 2.5rem;
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -141,25 +164,44 @@
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
 }
 
 /* Responsive */
 @media (min-width: 640px) {
-  .title { font-size: 3rem; }
-  .buttonGroup { flex-direction: row; gap: 1rem; }
+  .title {
+    font-size: 3rem;
+  }
+  .buttonGroup {
+    flex-direction: row;
+    gap: 1rem;
+  }
 }
 
 @media (min-width: 768px) {
-  .title { font-size: 3.5rem; }
+  .title {
+    font-size: 3.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
-  .title { font-size: 4rem; }
+  .title {
+    font-size: 4rem;
+  }
 }

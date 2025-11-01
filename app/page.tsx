@@ -1,11 +1,10 @@
-"use client";
-import About from "@/components/About";
-import Header from "@/components/Header"; 
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
-import Results from "@/components/Results";
-
-import Image from "next/image";
+import Feedback from "@/components/Feedback"
+import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer";
+import About from "@/components/About";
 
 
 export default function Home() {
@@ -13,9 +12,11 @@ export default function Home() {
     <main>
       <Hero/>
       <About/>
-      {/* <Header/> */}
+      <Header/>
       <HowItWorks/>
-      <Results/>
+      <Feedback/>
+      <FAQ/>
+      <Footer/>
     </main>
   );
 

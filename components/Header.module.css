@@ -1,121 +1,102 @@
-/* Header fixo */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 50;
-  transition: all 0.3s ease;
-  background: transparent;
-}
-
-.scrolled {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Container interno */
-.headerContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  padding: 0 32px;
+  background-color: #0b1f13; /* fundo verde escuro */
+  color: #f1f5f9;
+  z-index: 100;
+  transition: all 0.3s ease;
 }
 
-/* Logo */
+.scrolled {
+  background-color: rgba(11, 31, 19, 0.95);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
 .logo {
   font-weight: bold;
   font-size: 1.5rem;
-  color: #1d4ed8; /* azul */
+  color: #ffffff; 
 }
 
-/* Navegação Desktop */
-.navDesktop {
-  display: none;
-}
-
-.navDesktop button {
-  margin-left: 16px;
-  background: none;
-  border: none;
-  font-weight: 500;
-  cursor: pointer;
-  color: #1f2937; /* cinza escuro */
-  transition: color 0.2s;
-}
-
-.navDesktop button:hover {
-  color: #1d4ed8;
-}
-
-/* Botão */
-.button {
-  margin-left: 16px;
-  padding: 8px 16px;
-  font-weight: 500;
-  cursor: pointer;
-  border: none;
-  border-radius: 6px;
-  background-color: #1d4ed8;
-  color: white;
-  transition: background 0.2s;
-}
-
-.button:hover {
-  background-color: #1e40af;
-}
-
-/* Mobile Toggle */
-.mobileToggle {
-  display: block;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #1f2937;
-}
-
-/* Menu Mobile */
-.navMobile {
+.nav {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 12px 0;
-  border-top: 1px solid #e5e7eb;
+  align-items: center;
+  gap: 24px;
 }
 
-.navMobile button {
+.navButton {
   background: none;
   border: none;
+  color: #ffffff; 
   font-weight: 500;
   cursor: pointer;
-  color: #1f2937;
-  text-align: left;
-  padding: 8px 0;
+  transition: color 0.2s ease;
 }
 
-.navMobile button:hover {
-  color: #1d4ed8;
+.navButton:hover {
+  color: #ffffff;
 }
 
-.navMobile .button {
-  width: 100%;
+.startButton {
+  background-color: #63836c;
+  color: rgb(225, 216, 216);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-/* Responsividade Desktop */
-@media (min-width: 768px) {
-  .navDesktop {
-    display: flex;
-    align-items: center;
-  }
-  .mobileToggle {
+.startButton:hover {
+  background-color: #5a7662;
+}
+
+/* Mobile */
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #f1f5f9;
+  cursor: pointer;
+}
+
+.mobileNav {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.mobileNav button {
+  background: none;
+  border: none;
+  color: #a3bfa8;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.mobileNav button:hover {
+  color: #ffffff;
+}
+
+.showMobileNav {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .nav {
     display: none;
   }
-  .navMobile {
-    display: none;
+  .mobileMenuButton {
+    display: block;
   }
 }
