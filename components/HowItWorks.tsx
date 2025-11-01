@@ -70,6 +70,21 @@ const HowItWorks = () => {
             <p className={styles.ctaDescription}>
               Não importa seu nível atual. O importante é dar o primeiro passo.
             </p>
+            <div className={styles.buttonArea} >
+              <button
+                className={styles.buttonGroup}
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/554499999999?text=Oi, vim pelo site!",
+                    "_blank"
+                  )
+                }
+              >
+                Comece agora
+              </button>
+
+              
+            </div>
           </div>
         </div>
       </div>

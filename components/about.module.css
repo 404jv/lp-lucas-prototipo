@@ -144,9 +144,15 @@
   width: 100%;
 }
 
-.buttonArea{
+
+.buttonGroup:hover {
+  background-color: #e3d6c1;
+  /* cor um pouco mais escura */
+}
+
+.buttonArea {
   height: 40px;
-  
+
 }
 
 .quote {
